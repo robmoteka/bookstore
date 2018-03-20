@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block 'content' %}
+<ul>
+    {% for author in object_list %}
+    <li>
+        {{forloop.counter}} {% cycle '<' '>' %} {{ author.name  }}
+    </li>
+    {% endfor %}
+</ul>
+
+{{ "O żesz kurwa http://facebooka.coma"|urlize }}
+
+{% endblock %}
