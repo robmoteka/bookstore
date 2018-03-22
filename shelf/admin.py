@@ -1,5 +1,4 @@
 from .models import Author, Publisher, Book
-
 from django.contrib import admin
 
 @admin.register(Author)
@@ -16,5 +15,7 @@ class BookAdmin(admin.ModelAdmin):
     search_fields = ['title', 'author']
     list_display = ['title', 'author' ,'isbn']
     ordering = ['title']
+
+
 
 admin.site.register(Book, BookAdmin)
