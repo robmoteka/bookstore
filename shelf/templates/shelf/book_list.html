@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block 'content' %}
 <ul>
-    {% for author in object_list %}
+    {% for authors in object_list %}
     <li>
         {{forloop.counter}} {% cycle '<' '>' %} {{ author.first_name }} {{ author.second_name }}
     </li>

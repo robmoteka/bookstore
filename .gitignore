@@ -1,0 +1,10 @@
+*.[oa]
+*~
+.idea/
+biblio/bin/
+__*
+__*/
+*.py[c]
+biblio/include/
+biblio/lib/
+
