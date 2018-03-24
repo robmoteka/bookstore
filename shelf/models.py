@@ -40,7 +40,7 @@ class Book(models.Model):
         :return:
         Returns joined string  - first and last name for all book authors divided by comma
         """
-        
+
         return ", ".join([a.first_name + " " + a.second_name for a in self.authors.all()])
 
     def __str__(self):
@@ -51,8 +51,8 @@ class BookEdition(models.Model):
     """
     Wydanie
     """
-    book = models.ForeignKey(Book)
-    publisher = models.ForeignKey(Publisher)
+    book = models.ForeignKey(Book, on_delete=models.CASCADE,)
+    publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE,)
     date = models.DateField()
     isbn = models.CharField(max_length=17)
 
@@ -71,7 +71,7 @@ class BookItem(models.Model):
     """
     Egzemplarz
     """
-    edition = models.ForeignKey(BookEdition)
+    edition = models.ForeignKey(BookEdition, on_delete=models.CASCADE,)
     catalog_number = models.CharField(max_length=30)
     cover_type = models.CharField(max_length=4, choices=COVER_TYPES)
 

@@ -15,12 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-
-
-#from shelf.views import AuthorListView, BookListView, PublisherListView, AuthorDetailView
+from biblio.views import HomePage
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^shelf/', include('shelf.urls', namespace='shelf')),
-    url(r'^contact/', include('contact.urls', namespace='contact'))
+    url(r'^shelf/', include('shelf.urls') ),
+    url(r'^contact/', include('contact.urls', namespace="contact-contact")),
+    url(r'', HomePage.as_view()),
 ]

@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 {% block 'content' %}
 <ul>
-    {% for authors in object_list %}
+    {% for book in object_list %}
     <li>
-        {{forloop.counter}} {% cycle '<' '>' %} {{ author.first_name }} {{ author.second_name }}
+        {{forloop.counter}}.
+        <a href="{% url 'shelf:book-detail' book.id %}">
+            {% cycle '[' '(' %}
+            {{ book.title }}
+            {% cycle ']' ')' %}
+        </a>
     </li>
     {% endfor %}
 </ul>
-
-{{ "O żesz kurwa http://facebooka.coma"|urlize }}
 
 {% endblock %}

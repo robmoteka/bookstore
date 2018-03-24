@@ -6,8 +6,8 @@ from shelf.models import BookItem
 
 
 class Rental(models.Model):
-    who = models.ForeignKey(User)
-    what = models.ForeignKey(BookItem)
+    who = models.ForeignKey(User, on_delete=models.CASCADE,)
+    what = models.ForeignKey(BookItem, on_delete=models.CASCADE,)
     when = models.DateTimeField(default=now)
     returned = models.DateTimeField(blank=True, null=True)
 

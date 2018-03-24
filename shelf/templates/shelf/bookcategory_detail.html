@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block 'content' %}
+
+<!--{#<div><a href="{% url 'shelf:book-list'  %}"> Powrót do listy</a></div>#}-->
+<div><h2>Kategoria: {{ object.name }}</h2></div>
+<div>
+    Książki:
+    <ul>
+     {% for book in object.book_set.all %}
+        <li>
+             <a href="{% url 'shelf:book-detail' book.id %}">
+            {{ book.title }}
+             </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div>
+    Autorzy:
+    <ul>
+    {% for author in object.authors.all %}
+    <li>
+        <a href="{% url 'shelf:author-detail' author.id %}"  >
+        {{author.first_name}} {{author.second_name}}
+        </a>
+    </li>
+    {% endfor %}
+        </ul>
+</div>
+
+
+
+{% endblock %}

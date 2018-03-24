@@ -1,8 +1,13 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from .models import Publisher,Book,Author
+from .models import Publisher,Book,Author, BookCategory
+
+
 
 class BookListView(ListView):
+    model = Book
+
+class BookDetailView(DetailView):
     model = Book
 
 class AuthorListView(ListView):
@@ -13,3 +18,6 @@ class PublisherListView(ListView):
 
 class AuthorDetailView(DetailView):
     model = Author
+
+class BookCategoryDetailView(DetailView):
+    model = BookCategory
