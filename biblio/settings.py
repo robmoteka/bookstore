@@ -37,9 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'shelf',
     'contact',
     'rental',
+=======
+>>>>>>> 4da3fe72609e08d95cbc920cd68c640d7cd134af
 ]
 
 MIDDLEWARE = [
@@ -57,10 +60,14 @@ ROOT_URLCONF = 'biblio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< HEAD
         'DIRS': [(BASE_DIR +'/biblio/templates/'),
 
 
                  ],
+=======
+        'DIRS': [],
+>>>>>>> 4da3fe72609e08d95cbc920cd68c640d7cd134af
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,4 +131,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4da3fe72609e08d95cbc920cd68c640d7cd134af
