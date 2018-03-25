@@ -113,3 +113,8 @@ ENV/
 # mypy
 .mypy_cache/
 >>>>>>> 4da3fe72609e08d95cbc920cd68c640d7cd134af
+
+bin/
+local/
+pip*
+aaa

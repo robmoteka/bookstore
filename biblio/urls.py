@@ -13,7 +13,6 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-<<<<<<< HEAD
 from django.conf.urls import url, include
 from django.contrib import admin
 from biblio.views import HomePage
@@ -23,11 +22,4 @@ urlpatterns = [
     url(r'^shelf/', include('shelf.urls') ),
     url(r'^contact/', include('contact.urls', namespace="contact-contact")),
     url(r'', HomePage.as_view()),
-=======
-from django.conf.urls import url
-from django.contrib import admin
-
-urlpatterns = [
-    url(r'^admin/', admin.site.urls),
->>>>>>> 4da3fe72609e08d95cbc920cd68c640d7cd134af
 ]
